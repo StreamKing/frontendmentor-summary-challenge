@@ -1,0 +1,204 @@
+@font-face {
+  font-family: Hanken;
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+body {
+  --border-radius: 25px;
+  --background-opacity: 0.1;
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-background: hsl(0, 100%, 67%, var(--background-opacity));
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-backgrund: hsl(39, 100%, 56%, var(--background-opacity));
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-background: hsl(166, 100%, 37%, var(--background-opacity));
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-background: hsl(234, 85%, 45%, var(--background-opacity));
+
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --pale-blue: hsl(221, 100%, 96%);
+
+  --card-width: 220px;
+
+  --larger-font-size: 18px;
+
+  font-family: Hanken, Arial, Helvetica, sans-serif;
+  background-color: var(--pale-blue, blue);
+  margin: 0;
+}
+
+main {
+  display: inline-flex;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.2);
+}
+
+.final-result {
+  background-color: hsl(252, 100%, 67%);
+  border-radius: var(--border-radius);
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--card-width, 220px);
+  background-image: linear-gradient(
+    to top,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%)
+  );
+}
+
+.final-score-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border-radius: 150px;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+}
+
+.final-score-circle h1 {
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0;
+}
+.final-score-circle p {
+  margin-top: 0;
+  color: var(--light-lavender);
+}
+
+.final-result .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.final-result h1,
+h2,
+p {
+  color: white;
+}
+
+.final-result h4 {
+  font-weight: 500;
+  color: var(--light-lavender);
+}
+
+.final-result .footer p {
+  font-weight: 500;
+  color: var(--light-lavender);
+}
+
+.final-result .footer h2 {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.result-summary {
+  width: var(--card-width, 220px);
+  padding: 32px;
+  background-color: white;
+  border-radius: var(--border-radius);
+}
+
+.result-summary h3,
+span {
+  color: var(--dark-gray-blue, black);
+  font-weight: 700;
+}
+
+.result-summary .scores-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.score p {
+  margin: 0;
+  color: gray;
+  font-weight: 700;
+}
+
+.score[data-type="recreation"] {
+  background-color: var(--light-red-background);
+}
+.score[data-type="memory"] {
+  background-color: var(--orangey-yellow-backgrund);
+}
+.score[data-type="verbal"] {
+  background-color: var(--green-teal-background);
+}
+.score[data-type="visual"] {
+  background-color: var(--cobalt-blue-background);
+}
+
+.score .image-and-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+[data-type="memory"] {
+  color: var(--orangey-yellow, orange);
+}
+
+[data-type="recreation"] {
+  color: var(--light-red, red);
+}
+
+[data-type="verbal"] {
+  color: var(--green-teal, teal);
+}
+
+[data-type="visual"] {
+  color: var(--cobalt-blue, teal);
+}
+
+.result-summary .footer {
+  margin-top: 32px;
+}
+
+.result-summary .footer button {
+  font-size: var(--larger-font-size);
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: var(--dark-gray-blue);
+  padding: 8px 16px;
+  border-radius: 48px;
+  height: 48px;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media (max-width: 992px) {
+  main {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    flex-direction: column;
+  }
+
+  main .final-result {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
