@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github](https://github.com/StreamKing/frontendmentor-summary-challenge)
-- Live Site URL: [github page](https://your-live-site-url.com)
+- Live Site URL: [github pages]()https://streamking.github.io/frontendmentor-summary-challenge/
 
 ## My process
 First adding hmtl scaffold than the styles. 
