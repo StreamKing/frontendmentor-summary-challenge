@@ -6,6 +6,11 @@
 body {
   --border-radius: 25px;
   --background-opacity: 0.1;
+  --card-width: 235px;
+  --larger-font-size: 18px;
+
+
+
   --light-red: hsl(0, 100%, 67%);
   --light-red-background: hsl(0, 100%, 67%, var(--background-opacity));
   --orangey-yellow: hsl(39, 100%, 56%);
@@ -19,9 +24,6 @@ body {
   --light-lavender: hsl(241, 100%, 89%);
   --pale-blue: hsl(221, 100%, 96%);
 
-  --card-width: 220px;
-
-  --larger-font-size: 18px;
 
   font-family: Hanken, Arial, Helvetica, sans-serif;
   background-color: var(--pale-blue, blue);
@@ -96,7 +98,6 @@ p {
 }
 
 .final-result .footer p {
-  font-weight: 500;
   color: var(--light-lavender);
 }
 
@@ -179,6 +180,7 @@ span {
 }
 
 .result-summary .footer button {
+  cursor: pointer;
   font-size: var(--larger-font-size);
   width: 100%;
   border: none;
@@ -186,7 +188,15 @@ span {
   background-color: var(--dark-gray-blue);
   padding: 8px 16px;
   border-radius: 48px;
-  height: 48px;
+  height: 48px; 
+}
+
+.result-summary .footer button:active{
+  background-image: linear-gradient(
+    to top,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%)
+  );
 }
 
 /* On screens that are 992px wide or less, the background color is blue */
